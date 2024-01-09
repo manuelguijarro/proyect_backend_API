@@ -1,5 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const cors = require('cors');
 const usersData = require('./data.js');
 const user_routes = require('./routes/users.js');
 
@@ -7,7 +8,10 @@ const user_routes = require('./routes/users.js');
 require('dotenv').config()
 
 mongoose.connect(process.env.MONGO_URI)
-    .then((result) => {app.listen(5000);})
+    .then((result) => {
+      app.listen(5000);
+      console.log('connected to db'); 
+    })
     .catch((err) => console.log(err))
 
 
@@ -38,5 +42,5 @@ const auth  = (req, res, next) => {
 
 
 
-app.use(logger,express.json())
+app.use(logger,express.json(),cors({origin:'*'}))
 app.use('/api/users', user_routes)
