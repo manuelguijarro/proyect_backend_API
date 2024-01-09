@@ -2,6 +2,7 @@
   "name": "proyecto_lotr_backend_api",
   "version": "1.0.0",
   "description": "proyecto backend para API",
+  "packageManager": "pnpm@7.5.1",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
