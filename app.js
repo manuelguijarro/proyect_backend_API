@@ -42,5 +42,5 @@ const auth  = (req, res, next) => {
 
 
 
-app.use(logger,express.json(),cors({origin:'*'}))
+app.use(logger,express.json(),cors({origin:'https://proyect-backend-api.vercel.app/'}))
 app.use('/api/users', user_routes)
