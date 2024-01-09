@@ -6,7 +6,15 @@ const getUsers = (req, res) => {
         .then(result => res.status(200).json({ result }))
         .catch(error => res.status(404).json({  Message: 'User not found' }));
 }
-
+const checkUser = (req, res) => {
+    User.findOne({ email: req.body.email, password: req.body.password })
+        .then(result => {
+            res.status(200).json({ result });
+        })
+        .catch(error => {
+            res.status(404).json({ Message: 'User not found' });
+        });
+}
 const getUser = (req, res) => {
     User.findOne({ _id: req.params.userID })
         .then(result => res.status(200).json({ result }))
@@ -33,6 +41,7 @@ const deleteUser = (req, res) => {
 
 module.exports = {
     getUsers,
+    checkUser,
     getUser,
     createUser,
     updateUser,
