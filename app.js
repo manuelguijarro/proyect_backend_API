@@ -49,3 +49,5 @@ app.use(logger,express.json(),cors({
   optionsSuccessStatus: 204
 }))
 app.use('/api/users', user_routes)
+
+module.exports = app
