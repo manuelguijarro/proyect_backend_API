@@ -43,7 +43,7 @@ const auth  = (req, res, next) => {
 
 
 app.use(logger,express.json(),cors({
-  origin:'https://proyect-backend-proi1w8ib-manuels-projects-84e6d30b.vercel.app/',
+  origin:'https://proyect-backend-api-1s58-three.vercel.app/',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204
 }))
