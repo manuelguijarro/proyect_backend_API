@@ -43,7 +43,7 @@ const auth  = (req, res, next) => {
 
 
 app.use(logger,express.json(),cors({
-  origin:'https://proyect-backend-api.vercel.app/',
+  origin:'https://proyect-backend-proi1w8ib-manuels-projects-84e6d30b.vercel.app/',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Permite incluir cookies en las solicitudes (si estás usando)
   optionsSuccessStatus: 204
